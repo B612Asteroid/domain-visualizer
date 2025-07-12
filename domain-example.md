@@ -29,7 +29,7 @@
   - relation: many-to-one
   - null: true
 - contentType: Enum
-  - allows: [HT, VI, QU]
+  - allows: ["HT", "VI", "QU"]
 - name: String
   - min: 1
   - max: 1000

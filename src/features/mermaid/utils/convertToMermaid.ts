@@ -17,5 +17,6 @@ export function convertToMermaid(document: DomainDocument): string {
     }
   }
 
+  console.log(lines.join("\n"));
   return lines.join("\n");
 }
