@@ -1,4 +1,4 @@
-import { parseMarkdown } from "../parseMarkdown";
+import { parseMarkdown } from "../markdown/parseMarkdown";
 import type { DomainDocument } from "../../domain/types";
 
 describe("parseMarkdown", () => {

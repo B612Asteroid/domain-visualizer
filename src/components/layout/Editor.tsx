@@ -1,7 +1,7 @@
 // src/components/MarkdownEditor.tsx
 import MDEditor from "@uiw/react-md-editor";
 import { useDispatch, useSelector } from "react-redux";
-import { setMarkdown } from "@/features/markdown/markdownSlice";
+import { setMarkdown } from "@/features/parser/markdown/slice/markdownSlice";
 import type { RootState } from "@/stores/store";
 
 export function MarkdownEditor() {

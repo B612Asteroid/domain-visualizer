@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import domainReducer from "@/features/domain/domainSlice";
-import markdownReducer from "@/features/markdown/markdownSlice";
+import markdownReducer from "@/features/parser/markdown/slice/markdownSlice";
 import mermaidReducer from "@/features/mermaid/slice/mermaidSlice";
 
 export const store = configureStore({

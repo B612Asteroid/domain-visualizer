@@ -1,4 +1,4 @@
-import type { DomainDocument, DomainNode, EntityNode, FieldNode } from "../domain/types";
+import type { DomainDocument, DomainNode, EntityNode, FieldNode } from "../../domain/types";
 
 export function parseMarkdown(markdown: string): DomainDocument {
   const lines = markdown.split("\n");
