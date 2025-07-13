@@ -11,14 +11,14 @@ export function MarkdownEditor() {
   return (
     <div
       data-color-mode="light"
-      className="w-full h-[500px] border border-gray-300 rounded-md bg-white shadow-sm overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
+      className="w-full min-h-[500px] border border-gray-300 rounded-md bg-white shadow-sm overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
     >
       <MDEditor
         value={value}
         preview="edit"
         onChange={(v = "") => dispatch(setMarkdown(v))}
-        height={1000}
-        className="!bg-white !text-gray-800"
+        height={500}
+        className="!bg-white !text-gray-800 "
         textareaProps={{
           className: "text-sm font-mono focus:outline-none w-full h-full px-4 py-2",
         }}

@@ -33,7 +33,5 @@ export function convertToMermaid(document: DomainDocument): string {
       lines.push(relation);
     }
   }
-
-  console.log(lines.join("\n"));
   return lines.join("\n");
 }
