@@ -13,7 +13,9 @@ export default function MermaidDiagram() {
   const diagram = useMermaid(parsed);
 
   useEffect(() => {
-    if (!diagram || !containerRef.current) return;
+    if (!diagram || !containerRef.current) {
+      return;
+    }
 
     try {
       // DOM 요소 준비 후 파싱 → innerHTML 직접 삽입
@@ -34,8 +36,27 @@ export default function MermaidDiagram() {
   }, [diagram]);
 
   useEffect(() => {
-    mermaid.initialize({ startOnLoad: false });
+    mermaid.initialize({
+      startOnLoad: false,
+      themeVariables: {
+        background: "#ffffff",
+        primaryColor: "#E0F2FE",
+        primaryTextColor: "#0F172A",
+        lineColor: "#94A3B8",
+        fontFamily: "Inter, sans-serif",
+        fontSize: "14px",
+        edgeLabelBackground: "#ffffff",
+      },
+    });
   }, []);
 
-  return <div className="p-4 bg-white border rounded overflow-auto" ref={containerRef} />;
+  return (
+    <div className="w-full min-h-[500px] border border-gray-300 rounded-md bg-white shadow-sm p-4 overflow-auto relative">
+      {diagram ? (
+        <div ref={containerRef} />
+      ) : (
+        <p className="text-gray-500 italic">No diagram to render.</p>
+      )}
+    </div>
+  );
 }
